@@ -20,7 +20,8 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-parser"
 ).map(_ % circeVersion)
 
-libraryDependencies ++= Seq(jdbc, ehcache, ws, specs2 % Test, guice)
+libraryDependencies ++= Seq(ehcache, ws, specs2 % Test, guice)
+libraryDependencies ++= Seq(jdbc, "org.postgresql" % "postgresql" % "42.2.5")
 
 
 
