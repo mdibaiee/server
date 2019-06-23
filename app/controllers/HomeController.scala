@@ -17,12 +17,6 @@ import io.circe.generic.auto._, io.circe.syntax._
 @Singleton
 class HomeController @Inject()(cc: ControllerComponents)(implicit assetsFinder: AssetsFinder) extends AbstractController(cc) {
 
-  /**
-    * Create an Action to render an HTML page with a welcome message.
-    * The configuration in the `routes` file means that this method
-    * will be called when the application receives a `GET` request with
-    * a path of `/`.
-    */
   val accessToken: Option[String] = sys.env.get("GITHUB4S_ACCESS_TOKEN")
 
   def getRepo() = {
